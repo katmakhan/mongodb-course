@@ -1,4 +1,6 @@
-// This function is the endpoint's request handler.
+### This function is the endpoint's request handler.
+
+```javascript
 exports = function({ query, headers, body}, response) {
     var data=JSON.parse(query.data);
     var result="";
@@ -9,7 +11,7 @@ exports = function({ query, headers, body}, response) {
       result=data;
       // Querying a mongodb service:
       const doc = context.services.get("mongodb-atlas").db("Community").collection("KCYM");
-      doc.deleteMany(data);
+      doc.insertMany(data);
     }
     
     else
@@ -21,3 +23,4 @@ exports = function({ query, headers, body}, response) {
     //Return the result
     return  result;
 };
+```
