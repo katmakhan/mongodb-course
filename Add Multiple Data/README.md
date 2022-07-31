@@ -1,4 +1,4 @@
-### This function is the endpoint's request handler.
+### Node js function - Add multiple data
 
 ```javascript
 exports = function({ query, headers, body}, response) {
